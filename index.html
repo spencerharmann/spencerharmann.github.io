@@ -1,1 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of cybersecurity, software engineering, research, and embedded systems work.">
+  <title>Spencer Harman</title>
+  <style>
+    :root { --ink:#171717; --muted:#6d6d69; --rule:#d7d7d2; --link:#174c91; --paper:#fcfcfa; --max:1100px; }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.45 Arial, Helvetica, sans-serif; } a { color:inherit; text-decoration:none; }
+    .wrap { width:min(calc(100% - 42px), var(--max)); margin:auto; } nav { display:flex; justify-content:space-between; align-items:baseline; padding:22px 0 18px; border-bottom:1px solid var(--ink); font-size:.82rem; } .name { font-weight:700; letter-spacing:-.02em; }.name i { display:inline-block; width:7px; height:7px; margin:0 0 0 4px; background:var(--link); border-radius:50%; } .nav { display:flex; gap:20px; color:var(--muted); }.nav a:hover { color:var(--link); }
+    .intro { display:grid; grid-template-columns:185px 1fr; gap:30px; padding:80px 0 96px; border-bottom:1px solid var(--ink); } .label { color:var(--muted); font-size:.72rem; line-height:1.25; text-transform:uppercase; letter-spacing:.09em; } h1 { max-width:770px; margin:0; font-size:clamp(2.7rem,6.5vw,6.2rem); line-height:.93; letter-spacing:-.075em; font-weight:500; } h1 span { color:var(--link); } .intro p { grid-column:2; max-width:520px; margin:29px 0 0; font-size:1.15rem; letter-spacing:-.017em; }
+    section { border-bottom:1px solid var(--ink); padding:23px 0 0; }.section-header { display:grid; grid-template-columns:185px 1fr; gap:30px; padding-bottom:34px; }.section-header h2 { margin:0; font-size:1.05rem; font-weight:700; }.section-header p { max-width:470px; margin:0; color:var(--muted); font-size:.9rem; }
+    .project { display:grid; grid-template-columns:185px 1fr 170px; gap:30px; border-top:1px solid var(--rule); padding:27px 0 32px; }.project:first-child { border-top:1px solid var(--ink); }.project-index { color:var(--muted); font: .76rem/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; }.project h3 { margin:0 0 10px; font-size:clamp(1.8rem,3.25vw,3.35rem); line-height:.98; letter-spacing:-.06em; font-weight:500; }.project h3 a:hover { color:var(--link); }.project p { max-width:590px; margin:0; color:#333330; }.project-meta { color:var(--muted); font-size:.78rem; line-height:1.45; }.project-meta strong { display:block; color:var(--ink); margin-bottom:7px; font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; }
+    .about { display:grid; grid-template-columns:185px 1fr; gap:30px; padding:62px 0 76px; }.about h2 { max-width:600px; margin:0; font-size:clamp(2.2rem,4vw,4.1rem); font-weight:500; line-height:.98; letter-spacing:-.065em; }.about h2 span { color:var(--link); }.about p { max-width:590px; margin:26px 0 0; font-size:1.05rem; }.notes { margin-top:40px; max-width:590px; border-top:1px solid var(--ink); }.notes div { display:grid; grid-template-columns:120px 1fr; gap:15px; padding:10px 0; border-bottom:1px solid var(--rule); font-size:.86rem; }.notes b { font-size:.7rem; letter-spacing:.07em; text-transform:uppercase; }
+    .contact { padding:78px 0 86px; }.contact .label { margin-bottom:19px; }.contact a { font-size:clamp(2.3rem,5vw,5rem); letter-spacing:-.075em; border-bottom:3px solid var(--link); font-weight:500; }.contact a:hover { color:var(--link); }
+    footer { display:flex; justify-content:space-between; padding:17px 0 32px; color:var(--muted); font-size:.72rem; } @media (max-width:720px) { .wrap { width:min(calc(100% - 28px),var(--max)); }.intro,.section-header,.about { grid-template-columns:1fr; gap:15px; }.intro { padding:57px 0 66px; }.intro p { grid-column:auto; margin-top:17px; }.section-header { padding-bottom:25px; }.project { grid-template-columns:53px 1fr; gap:12px; }.project-meta { grid-column:2; margin-top:2px; }.about { padding:48px 0 57px; }.nav { gap:12px; }.notes div { grid-template-columns:88px 1fr; } footer { display:block; } footer span { display:block; margin-bottom:6px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav><a class="name" href="#top">Spencer Harman<i></i></a><div class="nav"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+    <main id="top">
+      <header class="intro">
+        <div class="label">Portfolio<br>Cybersecurity / software / research / embedded</div>
+        <h1>Cybersecurity, software, research, and <span>embedded systems.</span></h1>
+        <p>Spencer Harman is a computer science student at NC State working across cybersecurity, privacy research, and launch-vehicle software.</p>
+      </header>
+      <section id="work">
+        <div class="section-header"><div class="label">01 / Work</div><div><h2>Selected projects</h2></div></div>
+        <div id="projects"></div>
+      </section>
+      <section id="about">
+        <div class="about"><div class="label">02 / About</div><div><h2>Security work from <span>code to systems.</span></h2><p>Most of my time goes to cybersecurity, but I like moving between code, research, and hardware. I’ve built web-security tools, looked at mobile tracking, worked on a PII-redaction service, and written firmware for a rocket test stand. The part I enjoy most is taking a vague problem and turning it into something concrete that can be tested.</p><div class="notes"><div><b>Security</b><span>Application testing, incident response, PII handling, security automation</span></div><div><b>Research</b><span>WebView and Custom Tab tracking, information-flow analysis</span></div><div><b>Systems</b><span>AWS services, asynchronous pipelines, telemetry, embedded firmware</span></div></div></div></div>
+      </section>
+      <section class="contact" id="contact"><div class="label">03 / Contact</div><a href="mailto:harmanspencer2@gmail.com">harmanspencer2@gmail.com</a></section>
+    </main>
+    <footer><span>© <span id="year"></span> Spencer Harman</span><span>Raleigh, North Carolina</span></footer>
+  </div>
+  <script>
+    // EDIT HERE: Add public project URLs or revise descriptions as projects evolve.
+    const projects = [
+      {n:'01', area:'Cloud privacy service', title:'Bandwidth PII Redaction Service', text:'Built a serverless AWS pipeline for redacting PII from text and audio. The service combines regular-expression matching with Amazon Comprehend entity recognition, stores job state in DynamoDB, and uses SQS to process uploads. For audio, it transcribes files with Amazon Transcribe, identifies sensitive time ranges, and produces a bleeped MP3 alongside a redacted transcript.', url:''},
+      {n:'02', area:'Privacy research', title:'Tracking the Trackers in Android Apps', text:'Researched cross-boundary tracking through Android WebViews and Custom Tabs, where Java and JavaScript can exchange data outside many existing mobile threat models. The work used instrumentation and information-flow analysis techniques including VisibleV8 logs, UIHarvester, and WebViewTracer to examine how third-party tracking moves through these boundaries.', url:''},
+      {n:'03', area:'Embedded systems', title:'Liquid Rocketry Lab Flight Software', text:'Developed and debugged bare-metal firmware for custom microcontrollers used in liquid-rocket test-stand infrastructure. Work included real-time control and data logging, wireless telemetry between mission control and the test stand, compatibility support for legacy firmware files, and flight-computer research on sensor fusion and fault tolerance.', url:''},
+      {n:'04', area:'Application security', title:'Phidippus Web Vulnerability Scanner', text:'Built and published an asynchronous Python web scanner for authorized security testing. Phidippus uses HTTPX and BeautifulSoup to inspect applications for OWASP-style issues including SQL injection, XSS, weak security headers, exposed sensitive paths, and server-banner disclosure; it can preserve authenticated sessions and relate detected software to CVE data through the NIST API.', url:'https://github.com/spencerharmann/Phidippus'},
+      {n:'05', area:'Access control', title:'Redis Access-Control Design Audit', text:'Reverse-engineered Redis ACL enforcement through source-code analysis, tracing requests through authorization decisions. Evaluated the design against DAC, RBAC, ABAC, and reference-monitor properties, then documented risks around configuration, privilege scope, and enforcement integrity.', url:''},
+      {n:'06', area:'Security automation', title:'Incident Response & Credential-Exposure Automation', text:'At Red Hat, worked with Incident Response, Threat Intelligence, and Offensive Security teams on active-threat investigations and escalation. Designed credential-exposure detection using Sumo Logic, Splunk, and AWS, and contributed LeakTK features for pattern matching, secret redaction, and pattern-server authentication.', url:''},
+      {n:'07', area:'Malware remediation', title:'Malware Remediation & Supply-Chain Defense', text:'Supported a cross-functional response to a publicly disclosed malware campaign. Reviewed malware behavior, helped improve detection coverage, and worked with the CSIRT to deploy YARA-based controls and package-protection measures.', url:''},
+      {n:'08', area:'Game development', title:"You're It!", text:'A 2.5D multiplayer tag game for up to eight players. Grapple, wall-jump, dodge, and shove through arena matches while passing an explosive glow before the timer runs out. Includes online and local play, bots, and 40 arenas.', url:'https://store.steampowered.com/app/5187640/Youre_It/'}
+    ];
+    document.querySelector('#projects').innerHTML = projects.map(p => '<article class="project"><div class="project-index">' + p.n + '</div><div><h3>' + (p.url ? '<a href="' + p.url + '" target="_blank" rel="noreferrer">' + p.title + ' ↗</a>' : p.title) + '</h3><p>' + p.text + '</p></div><aside class="project-meta"><strong>' + p.area + '</strong></aside></article>').join('');
+    document.querySelector('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
